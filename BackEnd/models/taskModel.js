@@ -8,7 +8,10 @@ const TaskSchema = new Schema({
     },
     userId : {
         type : String,
-        required : true
+    },
+    Done :{
+        type : Boolean,
+        default : false
     }
 })
 

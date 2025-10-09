@@ -1,14 +1,20 @@
 const express = require("express");
 const app = express();
 const port = 4000;
-const router = require("./route/User");
+const router = require("./route/UserRoute.js");
+const route = require("./route/TaskRoute.js");
 const mongoose = require("mongoose");
-const cors = require("cors");
+const DB = require("./db.js");
+DB();
+
 
 app.use(express.json());
-app.use(cors());
 
-app.use("/",router);
+
+app.use("/task",route);
+
+
+app.use("/user",router);
 
 
 app.listen(port, () => {
