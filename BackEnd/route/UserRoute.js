@@ -1,15 +1,10 @@
-const express = require('express');
+const express = require("express");
 const router = express.Router();
-const User = require("../models/UserModel");
-const Task = require("../models/taskModel");
-const {CreateUser,LoginUser,UserManager} = require("../controller/UserControl");
+const { CreateUser, LoginUser, UserManager } = require("../controller/UserControl");
+const AuthmiddleWare = require("../middleware/Authmiddleware");
 
-
-// create new user 
-
-router.post("/signup",CreateUser);
-router.post("/login",LoginUser);
-
-
+router.post("/signup", CreateUser);
+router.post("/login", LoginUser);
+router.get("/task", AuthmiddleWare, UserManager);
 
 module.exports = router;
