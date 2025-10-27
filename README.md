@@ -22,4 +22,4 @@
 ![Login Page](./images/login.jpg)  
 
 **Task Manager Dashboard**
-![Task Manager Dashboard](./images/taskmanager.jpg)
+![Task Manager Dashboard](./images/dashboard.jpg)

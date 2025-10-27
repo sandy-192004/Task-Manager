@@ -107,7 +107,7 @@ const TaskManager = () => {
         alignItems: "center",
       }}
     >
-      {/* ✅ Logout Button */}
+    
       <div style={styles.navbar}>
         <button style={styles.logoutButton} onClick={handleLogout}>
           Logout
